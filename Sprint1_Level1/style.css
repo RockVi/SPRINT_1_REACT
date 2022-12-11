@@ -1,0 +1,362 @@
+.container{
+
+    /* The main axis of the page is vertical (flex-direction: column) */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+/* Paddings  from the three paramount elements*/
+
+header,
+main, 
+footer{
+    padding: 1.5em;
+}
+
+/* Padding of content elements*/
+
+.content {
+    padding: 1.5em;
+}
+
+/* Size of item elements*/
+
+.item{
+    width: 100%;
+    height: 1.5em;
+}
+
+
+
+/* Static colors of the elements */
+
+/* Background-color of paddings from Header & Footer, the only ones that keep the same color in all responsive layouts */
+
+header,
+main,
+footer{
+    background-color: black;
+}
+
+/* Background-color of the elements with class = "content" */
+
+/* Header 1st content */
+header > .content:nth-child(1){
+    background-color:  rgb(45, 64, 89);
+    padding: 1.5em;
+}
+
+/* Header 2nd content */
+header > .content:nth-child(2){
+    background-color: rgb(240, 123, 63);
+    padding: 1.5em;
+}
+
+/* Main 1st content */
+main > section:nth-child(1){
+    background-color: rgb(78, 78, 106);
+    padding: 1.5em;
+}
+
+/* Main 2nd content */
+main > aside:nth-child(2){
+    background-color: rgb(247, 63, 82);
+    padding: 1.5em;
+}
+
+/* Footer only content */
+footer > .item:nth-child(1){
+    background-color: rgb(230, 175, 46);
+}
+
+
+
+/* Background-color of the elements with class = "item" */
+
+/* Items from Header 1st content */
+header > .content:nth-child(1) > .item:nth-child(1),
+header > .content:nth-child(1) > .item:nth-child(2),
+header > .content:nth-child(1) > .item:nth-child(3){
+    background-color: rgb(234, 84, 85);
+}
+
+/* Items from Header 2nd content */
+header > .content:nth-child(2) > .item:nth-child(1){
+    background-color: rgb(254, 212, 96);
+}
+
+/* Items from Main 1st content */
+main > section:nth-child(1) > .item:nth-child(1),
+main > section:nth-child(1) > .item:nth-child(2),
+main > section:nth-child(1) > .item:nth-child(3),
+main > section:nth-child(1) > .item:nth-child(4){
+    background-color: rgb(31, 108, 176);
+}
+
+main > section:nth-child(1) > .item:nth-child(5){
+    background-color: rgb(112, 163, 196);
+}
+
+/* Items from Main 2nd content */
+main > aside:nth-child(2) > .item:nth-child(1),
+main > aside:nth-child(2) > .item:nth-child(2){
+    background-color: rgb(254, 234, 133);
+}
+
+/* There is not content from Footer */
+
+
+
+/* Exercice 1. Desktop & Laptop Layout */
+
+@media screen and (min-width: 1024px){
+
+    .container{
+
+        /* Width of the full container */
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    /* Displaying Header element with a vertical main axis */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    /* Displaying the 1st content from Header with an horizontal main axis */
+    
+    header > .content:nth-child(1){
+        display: flex;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each item inside this content*/
+
+    header > .content:nth-child(1) > .item:nth-child(1),
+    header > .content:nth-child(1) > .item:nth-child(3){
+        flex: 1;
+    }
+    header > .content:nth-child(1) > .item:nth-child(2){
+        flex: 4;
+    }
+
+    /* Displaying Main element with an horizontal main axis */
+
+    main{
+        display: flex;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each content inside Main element*/
+
+    section{
+        flex: 4;
+    }
+    aside{
+        flex: 3;
+    }
+
+    /* Displaying Section element with an horizontal main axis, wrapped in 3 lines */
+
+    section{
+        display:flex;
+        flex-flow: row wrap;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each item inside Section */
+
+    section >.item:nth-child(1){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(2){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(3){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(4){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(5){
+        flex-basis: calc(100%);
+    }
+
+     /* Displaying Aside element with a vertical main axis */
+    
+    aside{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+} 
+
+
+/* Exercice 2. Tablet & iPad Layout */
+
+@media screen and (min-width: 601px) and (max-width: 1023px){
+    
+
+    .container{
+        /* Centering the element */
+         margin: 1.5em;
+    }
+
+    /* Displaying Header element with a vertical main axis */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    /* Displaying the 1st content from Header with an horizontal main axis */
+    
+    header > .content:nth-child(1){
+        display: flex;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each item inside this content*/
+
+    header > .content:nth-child(1) > .item:nth-child(1),
+    header > .content:nth-child(1) > .item:nth-child(3){
+        flex: 1;
+    }
+    header > .content:nth-child(1) > .item:nth-child(2){
+        flex: 4;
+    }
+
+    /* Displaying Main element with a vertical main axis, and changing the background-color*/
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        background-color: yellow;
+    }
+
+
+    /* Displaying Section element with an horizontal main axis, wrapped in 3 lines */
+
+    section{
+        display:flex;
+        flex-flow: row wrap;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each item inside Section */
+
+    section >.item:nth-child(1){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(2){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(3){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(4){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(5){
+        flex-basis: calc(100%);
+    }
+
+     /* Displaying Aside element with a vertical main axis */
+    
+    aside{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+} 
+
+
+/* Exercice 3. Mobile Layout */
+
+@media screen and (max-width: 600px){
+
+    .container{
+        /* Centering the element */
+        margin: 1.5em;
+    }
+
+    /* Displaying Header element with a vertical main axis */
+
+    header{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    /* Displaying the 1st content from Header with a vertical main axis */
+    
+    header > .content:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    
+    /* Displaying Main element with a vertical main axis,and changing the background-color */
+
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        background-color: rgb(254, 226, 40);
+    }
+
+    /* Displaying Section element with an horizontal main axis, wrapped in 3 lines */
+
+    section{
+        display:flex;
+        flex-flow: row wrap;
+        gap: 1.5em;
+    }
+
+    /* Setting the width of each item inside Section */
+
+    section >.item:nth-child(1){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(2){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(3){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(4){
+        flex-basis: calc(50% - 0.75em);
+    }
+    section >.item:nth-child(5){
+        flex-basis: calc(100%);
+    }
+
+     /* Displaying Aside element with a vertical main axis */
+    
+    aside{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+    }
+
+    /* Changing Footer's item background-color */
+    
+    footer > .item:nth-child(1){
+        background-color: rgb(253, 199, 100);
+    }
+
+}
+
+
+
