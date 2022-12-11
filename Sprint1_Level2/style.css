@@ -548,3 +548,57 @@ a:hover {
     font-size: 25px;
   }
 }
+
+/* ANIMATIONS */
+
+/* LOGO */
+
+.logo > a > img{
+  animation-name: animatedLogo;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 1s;
+ 
+  position: relative;
+  margin-left: 5em;
+}
+
+@keyframes animatedLogo{
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+/* TITLE */
+
+.title > h2{
+  animation-name: animatedText;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animatedText{
+  0% {color: rgb(255, 127, 80)}
+  25% {color: green}
+  50% {color: blue}
+  75% {color : black}
+  100% {color: rgb(255, 127, 80)}
+}
+
+/* BACKGROUND's TITLE */
+
+header > .content:nth-child(2){
+  animation-name: animatedBackground;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+@keyframes animatedBackground{
+  0% {background-color: rgb(221, 221, 221)}
+  25% {background-color: rgb(205, 171, 205)}
+  50% {background-color: rgb(232, 232, 157)}
+  75% {background-color: rgb(188, 200, 225)}
+  100% {background-color: rgb(221, 221, 221)}
+}
