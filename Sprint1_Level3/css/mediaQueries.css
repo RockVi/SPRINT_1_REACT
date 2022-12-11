@@ -1,0 +1,406 @@
+/* RESPONSIVE LAYOUTS */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 400px;
+    /* Position of the image*/
+    background-position-y: 50%;
+    background-position-x: 50%;
+  }
+
+  /* 1st content from Header, with horizontal display */
+
+  header > .content:nth-child(1) {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+    margin-top: 3em;
+  }
+
+  /* Nav bar specificity */
+
+  nav > ul{
+    justify-content: space-between
+  }
+
+  /* Setting the icons (span elements) from nav bar */
+
+  span {
+    margin-right: 0.5em;
+  }
+
+  /* Setting social icons*/
+
+  .socialMedia > ul {
+    justify-content: flex-end;
+    margin-right: 15%;
+  }
+
+  /* 2nd content from Header */
+
+  header > .content:nth-child(2) {
+    height: 55%;
+    margin: 0 5em;
+  }
+
+  /* Main's display */
+
+  main {
+    display: grid;
+    grid-template-columns: 75% calc(25% - 0.75em);
+    gap: 0.75em;
+  }
+
+  /* Section layout*/
+
+  section {
+    display: grid;
+    grid-template-areas: ". .";
+    gap: 1.5em;
+    padding: 0.75em;
+  }
+
+  section > div {
+    grid-column: 1 / span 2;
+  }
+
+  /* Font-sizes */
+
+  li {
+    font-size: 18px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 30px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside, 
+  footer{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+  header {
+    height: 400px;
+    background-position-y: 50%;
+    background-position-x: 50%;
+  }
+
+  /* 1st content from Header, with horizontal display */
+
+  header > .content:nth-child(1) {
+    display: grid;
+    grid-template-columns: 10% 75% 15%;
+    align-items: center;
+    margin-top: 3em;
+  }
+
+  /* Nav bar specificity*/
+  
+  nav > ul{
+    justify-content: space-between
+  }
+
+  /* Setting the icons from nav bar */
+
+  span {
+    margin-right: 0.5em;
+  }
+
+  .socialMedia > ul {
+    justify-content: flex-end;
+    margin-right: 15%;
+  }
+
+  /* 2nd content from Header */
+
+  header > .content:nth-child(2) {
+    height: 55%;
+    margin: 0 5em;
+  }
+
+  /* Main's display */
+
+  main {
+    display: grid;
+    grid-template-areas: ".";
+    gap: 0.75em;
+  }
+
+  /* Section layout*/
+
+  section {
+    display: grid;
+    grid-template-areas: ". .";
+    gap: 1.5em;
+    padding: 0.75em;
+  }
+
+  section > div {
+    grid-column: 1 / span 2;
+  }
+
+  /* Font-sizes */
+
+  li {
+    font-size: 18px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside,
+  footer{
+    font-size: 18px;
+  }
+
+
+}
+
+@media screen and (max-width: 799px) {
+  header {
+    height: 550px;
+    background-position-y: 40%;
+    background-position-x: 50%;
+  }
+
+  /* 1st content from Header, with a vertical main axis */
+
+  header > .content:nth-child(1) {
+    display: grid;
+    grid-template-areas: ".";
+    gap: 1em;
+    margin-top: 0.5em;
+  }
+
+  .logo,
+  .socialMedia {
+    justify-self: center;
+  }
+
+
+  header > div:nth-child(1) > nav > ul {
+    padding-inline-start: 0px;
+    padding: 0 10%;
+  }
+
+  /* Displaying ancor elements in order to set de Icons (span) at the top & center of the element */
+
+  header > div:nth-child(1) > nav > ul > li > a{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Setting each Icon (inside a span) from the nav's ancors */
+
+  header > div:nth-child(1) > nav > ul > li:nth-child(1) > a > span,
+  header > div:nth-child(1) > nav > ul > li:nth-child(2) > a > span,
+  header > div:nth-child(1) > nav > ul > li:nth-child(3) > a > span,
+  header > div:nth-child(1) > nav > ul > li:nth-child(4) > a > span,
+  header > div:nth-child(1) > nav > ul > li:nth-child(5) > a > span {
+    align-self: center;
+    margin-bottom: 10%;
+  }
+
+  
+  .socialMedia > ul {
+    padding: 0px;
+  }
+
+
+  /* 2nd content from Header */
+
+  header > .content:nth-child(2) {
+    height: 50%;
+    margin: 0 2em;
+  }
+
+  /* Main's display */
+
+  main {
+    display: grid;
+    grid-template-areas: ".";
+    gap: 0.75em;
+  }
+
+  /* Section layout*/
+
+  section {
+    display: grid;
+    grid-template-areas: ".";
+    gap: 1.5em;
+    padding: 0.75em;
+  }
+
+  section > article {
+    padding: 0.75em;
+    margin: 0 0.75em;
+  }
+
+
+ /* Font-sizes */
+
+   li {
+    font-size: 18px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside,
+  footer{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  header > div:nth-child(1) > nav > ul {
+    padding-inline-start: 0px;
+    padding: 0 10%;
+  }
+
+  header > .content:nth-child(2) {
+    height: 45%;
+    margin: 0 2em;
+  }
+
+  /* Font-sizes */
+
+  li {
+    font-size: 18px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 28px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside,
+  footer{
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  header > div:nth-child(1) > nav > ul {
+    padding-inline-start: 0px;
+    padding: 0 5%;
+  }
+
+  header > .content:nth-child(2) {
+    height: 50%;
+    margin: 0 1.5em;
+  }
+
+  /* Font-sizes */
+
+  li {
+    font-size: 15px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 25px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside,
+  footer{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header > div:nth-child(1) > nav > ul {
+    padding-inline-start: 0px;
+    padding: 0 1em;
+  }
+
+  header > .content:nth-child(2) {
+    height: 45%;
+    margin: 0 1em;
+  }
+
+  /* Font-sizes */
+
+  li {
+    font-size: 12px;
+  }
+
+  header > .content > div > h2 {
+    font-size: 25px;
+  }
+
+  .date {
+    font-size: 17px;
+  }
+
+  .caption {
+    font-size: 25px;
+  }
+
+  .articleText,
+  .bottomText,
+  aside,
+  footer{
+    font-size: 18px;
+  }
+}
